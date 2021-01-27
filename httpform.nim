@@ -3,10 +3,10 @@ import strutils, os, oids, base64, asyncfile, asyncdispatch, json
 include "httpform/multipart"
 
 type
-    HttpForm = ref object
+    HttpForm* = ref object
         tmp: string
         keepExtname: bool
-    AsyncHttpForm = HttpForm
+    AsyncHttpForm* = HttpForm
 
 template newHttpFormImpl(result) =
     new(result)
